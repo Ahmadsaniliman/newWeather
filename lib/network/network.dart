@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart';
-import 'package:newweatherapp/weather_model.dart';
+import 'package:newweatherapp/model/weather_model.dart';
 // import 'dart:developer' as devtool show log;
 
 class Network {
