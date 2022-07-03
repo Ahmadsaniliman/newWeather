@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:newweatherapp/model/weather_model.dart';
 import 'package:newweatherapp/ui/details/components/astro_details.dart';
+import 'package:newweatherapp/ui/details/components/bottom_bar.dart';
 import 'package:newweatherapp/ui/details/components/bottom_details.dart';
-import 'package:newweatherapp/ui/details/components/custom_bar.dart';
 import 'package:newweatherapp/ui/details/components/weather_info_2.dart';
 
 class DetailsPage extends StatelessWidget {
@@ -15,6 +15,14 @@ class DetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(snapshot.location.name),
+        centerTitle: true,
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+        elevation: 0,
+      ),
+      bottomNavigationBar: const BottomNavBar(),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(
@@ -24,7 +32,7 @@ class DetailsPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              CustomBar(snapshot: snapshot),
+              //   CustomBar(snapshot: snapshot),
               const SizedBox(height: 20.0),
               WeatherInfo2(snapshot: snapshot),
               const SizedBox(height: 30.0),

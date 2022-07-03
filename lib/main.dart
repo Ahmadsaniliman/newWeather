@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:newweatherapp/network/network.dart';
 import 'package:newweatherapp/model/weather_model.dart';
 import 'package:newweatherapp/ui/home/home.dart';
+import 'package:newweatherapp/ui/welcome/welcome.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Weather App',
       theme: ThemeData(),
-      home: const HomePage(),
+      home: const WelcomeView(),
     );
   }
 }

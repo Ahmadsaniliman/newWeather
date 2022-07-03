@@ -38,6 +38,10 @@ class WeatherInfo2 extends StatelessWidget {
           ],
         ),
         const Icon(FontAwesomeIcons.sun, size: 100),
+        // getWeatherDescription(
+        //     weatherDescription: snapshot.current.condition.icon,
+        //     color: Colors.blue,
+        //     size: 50),
       ],
     );
   }

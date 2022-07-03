@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:newweatherapp/constants/weather_des.dart';
 import 'package:newweatherapp/model/weather_model.dart';
 
 class WeatherNameAndDescription extends StatelessWidget {
@@ -36,7 +37,11 @@ class WeatherNameAndDescription extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      const Icon(Icons.cloud, size: 100.0),
+                      getWeatherDescription(
+                        weatherDescription: snapshot.current.condition.icon,
+                        color: Colors.pink,
+                        size: 50.0,
+                      ),
                       Column(
                         children: [
                           const Icon(FontAwesomeIcons.temperatureHigh),
